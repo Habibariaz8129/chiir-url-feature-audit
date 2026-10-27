@@ -1,0 +1,13 @@
+{
+  "shap_version": "0.50.0",
+  "explainer": "shap.TreeExplainer",
+  "feature_perturbation": "interventional",
+  "model_output": "probability",
+  "background_n": 100,
+  "background_seed": 4242,
+  "explained_test_n": 250,
+  "test_sample_seed": 4243,
+  "preprocessing": "StandardScaler fitted on core+validation; SHAP receives scaled features as model inputs",
+  "max_abs_additivity_error": 2.957316236340546e-08,
+  "mean_abs_additivity_error": 7.325365084742685e-09
+}

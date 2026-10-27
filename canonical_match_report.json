@@ -1,0 +1,90 @@
+{
+  "canonical_file": "PhiUSIIL_Phishing_URL_Dataset.csv",
+  "canonical_sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6",
+  "supplied_file": "phiusiil_phishing.csv",
+  "supplied_sha256": "78636bd2bf9166f45b6a31232ef461a2814ef38e53f287c56deaa994d2d43fa9",
+  "canonical_shape_rows_columns": [
+    235795,
+    56
+  ],
+  "supplied_shape_rows_columns": [
+    235795,
+    55
+  ],
+  "canonical_columns_absent_from_supplied": [
+    "FILENAME"
+  ],
+  "supplied_columns_absent_from_canonical": [],
+  "same_exact_URL_sequence_row_by_row": true,
+  "URL_multiset_equal_including_duplicate_multiplicities": true,
+  "canonical_unique_nonblank_URLs": 235370,
+  "supplied_unique_nonblank_URLs": 235370,
+  "shared_unique_nonblank_URLs": 235370,
+  "unmatched_canonical_unique_URLs": 0,
+  "unmatched_supplied_unique_URLs": 0,
+  "unmatched_canonical_rows": 0,
+  "unmatched_supplied_rows": 0,
+  "duplicate_URL_groups": 425,
+  "rows_in_duplicate_URL_groups": 850,
+  "extra_duplicate_rows_if_keep_first": 425,
+  "canonical_duplicate_URL_groups_with_conflicting_labels": 0,
+  "supplied_duplicate_URL_groups_with_conflicting_labels": 0,
+  "canonical_label_counts": {
+    "0": 100945,
+    "1": 134850
+  },
+  "supplied_label_counts": {
+    "0": 134850,
+    "1": 100945
+  },
+  "rowwise_label_same_count_if_same_URL_sequence": 0,
+  "rowwise_label_inverted_count_if_same_URL_sequence": 235795,
+  "rowwise_label_conflict_count_if_same_URL_sequence": 0,
+  "all_shared_non_label_fields_equal_row_by_row_if_same_URL_sequence": true,
+  "shared_non_label_field_count": 54,
+  "label_relation_counts_by_URL_group": {
+    "inverted": 235370
+  },
+  "canonical_and_supplied_source_checksums_are_full_sha256": true,
+  "shared_non_label_field_comparison_csv": "shared_field_comparison.csv",
+  "url_group_detail_file": "url_match_details.csv.gz",
+  "canonical_unique_identifier_column_absent_from_supplied": "FILENAME",
+  "canonical_label_semantics_from_UCI_metadata": {
+    "1": "legitimate",
+    "0": "phishing"
+  },
+  "interpretation": "Confirm inversion only when URL matching has no unmatched records, every aligned label is complementary, no conflicting labels occur, and shared non-label fields agree. Check all exported files before interpreting class-specific metrics.",
+  "record_level_counts": {
+    "canonical_rows": 235795,
+    "supplied_rows": 235795,
+    "matched_rows_by_same_URL_sequence_and_duplicate_occurrence": 235795,
+    "unmatched_canonical_rows": 0,
+    "unmatched_supplied_rows": 0,
+    "rowwise_exact_label_inversions": 235795,
+    "rowwise_same_labels": 0,
+    "rowwise_conflicting_labels": 0,
+    "matched_distinct_URL_keys": 235370,
+    "unmatched_canonical_distinct_URL_keys": 0,
+    "unmatched_supplied_distinct_URL_keys": 0
+  },
+  "duplicate_group_details": {
+    "duplicate_URL_groups": 425,
+    "rows_in_duplicate_URL_groups": 850,
+    "extra_duplicate_rows_removed_when_keep_first": 425,
+    "canonical_duplicate_URL_groups_with_conflicting_labels": 0,
+    "supplied_duplicate_URL_groups_with_conflicting_labels": 0
+  },
+  "processed_file_checksums": {
+    "supplied_raw_CSV_sha256": "78636bd2bf9166f45b6a31232ef461a2814ef38e53f287c56deaa994d2d43fa9",
+    "canonical_UCI_CSV_sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6",
+    "deduplicated_feature_cache_sha256": "16b96ba75b8c5598929952eead08007643515a9c2ca5fc3b50f3803622513988"
+  },
+  "verified_conclusion": "The supplied artifact is record-aligned with the canonical UCI CSV by exact URL sequence and duplicate occurrence. Every shared non-label field agrees row by row, and all labels are complemented.",
+  "byte_for_byte_reconstruction": {
+    "operation": "drop FILENAME; replace label by 1 - label; preserve order and all remaining values",
+    "recreated_csv_sha256": "78636bd2bf9166f45b6a31232ef461a2814ef38e53f287c56deaa994d2d43fa9",
+    "supplied_csv_sha256": "78636bd2bf9166f45b6a31232ef461a2814ef38e53f287c56deaa994d2d43fa9",
+    "sha256_matches_supplied": true,
+    "conclusion": "The exact supplied CSV is recreated byte-for-byte by this transformation for the canonical file checked."
+  }
+}

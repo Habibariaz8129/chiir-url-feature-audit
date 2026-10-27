@@ -1,0 +1,68 @@
+{
+  "representative_examples": [
+    {
+      "URL": "https://www.southbankmosaics.com",
+      "stored_URLLength": 31,
+      "recomputed_URLLength": 32,
+      "stored_DomainLength": 24,
+      "recomputed_HostnameLength": 24,
+      "stored_NoOfSubDomain": 1,
+      "recomputed_HostnameLabelCount": 3,
+      "stored_letters": 18,
+      "recomputed_letters": 27,
+      "stored_digits": 0,
+      "recomputed_digits": 0,
+      "stored_other": 1,
+      "recomputed_other": 5,
+      "URL_slice_12_to_minus1": "southbankmosaics.co",
+      "slice_letters": 18,
+      "slice_digits": 0,
+      "slice_other": 1
+    },
+    {
+      "URL": "https://www.uni-mainz.de",
+      "stored_URLLength": 23,
+      "recomputed_URLLength": 24,
+      "stored_DomainLength": 16,
+      "recomputed_HostnameLength": 16,
+      "stored_NoOfSubDomain": 1,
+      "recomputed_HostnameLabelCount": 3,
+      "stored_letters": 9,
+      "recomputed_letters": 18,
+      "stored_digits": 0,
+      "recomputed_digits": 0,
+      "stored_other": 2,
+      "recomputed_other": 6,
+      "URL_slice_12_to_minus1": "uni-mainz.d",
+      "slice_letters": 9,
+      "slice_digits": 0,
+      "slice_other": 2
+    },
+    {
+      "URL": "https://www.voicefmradio.co.uk",
+      "stored_URLLength": 29,
+      "recomputed_URLLength": 30,
+      "stored_DomainLength": 22,
+      "recomputed_HostnameLength": 22,
+      "stored_NoOfSubDomain": 2,
+      "recomputed_HostnameLabelCount": 4,
+      "stored_letters": 15,
+      "recomputed_letters": 24,
+      "stored_digits": 0,
+      "recomputed_digits": 0,
+      "stored_other": 2,
+      "recomputed_other": 6,
+      "URL_slice_12_to_minus1": "voicefmradio.co.u",
+      "slice_letters": 15,
+      "slice_digits": 0,
+      "slice_other": 2
+    }
+  ],
+  "https_www_signature": {
+    "https_www_subset_n": 137295,
+    "stored_URLLength_equals_len_URL_minus_1_rate": 0.9923158163079501,
+    "NoOfLettersInURL_matches_URL_slice_12_minus1_rate": 0.995760952693106,
+    "NoOfDegitsInURL_matches_URL_slice_12_minus1_rate": 0.9991623875596344,
+    "NoOfOtherSpecialCharsInURL_matches_URL_slice_12_minus1_rate": 0.9947703849375432
+  }
+}

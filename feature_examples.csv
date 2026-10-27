@@ -1,0 +1,4 @@
+URL,stored_URLLength,recomputed_URLLength,stored_DomainLength,recomputed_HostnameLength,stored_NoOfSubDomain,recomputed_HostnameLabelCount,stored_letters,recomputed_letters,stored_digits,recomputed_digits,stored_other,recomputed_other,URL_slice_12_to_minus1,slice_letters,slice_digits,slice_other
+https://www.southbankmosaics.com,31,32,24,24,1,3,18,27,0,0,1,5,southbankmosaics.co,18,0,1
+https://www.uni-mainz.de,23,24,16,16,1,3,9,18,0,0,2,6,uni-mainz.d,9,0,2
+https://www.voicefmradio.co.uk,29,30,22,22,2,4,15,24,0,0,2,6,voicefmradio.co.u,15,0,2

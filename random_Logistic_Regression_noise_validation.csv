@@ -1,0 +1,5 @@
+split,model,sigma,validation_AP
+random,Logistic Regression,0.0,0.8758688700932747
+random,Logistic Regression,0.1,0.8599761707090803
+random,Logistic Regression,0.3,0.8157322588192024
+random,Logistic Regression,0.5,0.7885504604115836

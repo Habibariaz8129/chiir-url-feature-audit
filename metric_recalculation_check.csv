@@ -1,0 +1,13 @@
+split,model,n_match,max_abs_diff,confusion_match
+random,Logistic Regression,True,0.0,True
+random,Decision Tree,True,1.1102230246251565e-16,True
+random,Random Forest,True,0.0,True
+random,XGBoost,True,1.1102230246251565e-16,True
+exact-hostname,Logistic Regression,True,0.0,True
+exact-hostname,Decision Tree,True,0.0,True
+exact-hostname,Random Forest,True,1.1102230246251565e-16,True
+exact-hostname,XGBoost,True,0.0,True
+registered-domain,Logistic Regression,True,0.0,True
+registered-domain,Decision Tree,True,1.1102230246251565e-16,True
+registered-domain,Random Forest,True,0.0,True
+registered-domain,XGBoost,True,0.0,True

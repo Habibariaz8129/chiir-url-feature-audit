@@ -1,0 +1,17 @@
+split,model,sigma,validation_AP
+random,Logistic Regression,0.0,0.8758688700932747
+random,Logistic Regression,0.1,0.8599761707090803
+random,Logistic Regression,0.3,0.8157322588192024
+random,Logistic Regression,0.5,0.7885504604115836
+random,Decision Tree,0.0,0.7994026469418296
+random,Decision Tree,0.1,0.757459942272627
+random,Decision Tree,0.3,0.6944239957588527
+random,Decision Tree,0.5,0.6460668344573904
+random,Random Forest,0.0,0.8801514513691
+random,Random Forest,0.1,0.8666763594227053
+random,Random Forest,0.3,0.8188204044361268
+random,Random Forest,0.5,0.8107831285718898
+random,XGBoost,0.0,0.8494408583202233
+random,XGBoost,0.1,0.835088082790333
+random,XGBoost,0.3,0.7360349605089092
+random,XGBoost,0.5,0.6880892465782863

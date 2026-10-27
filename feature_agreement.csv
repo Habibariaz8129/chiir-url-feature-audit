@@ -1,0 +1,7 @@
+stored_column,recomputed_feature,feature,valid_n,exact_match_rate,mean_absolute_difference,pearson_correlation
+URLLength,URLLength_recomputed,URLLength,235370,0.205752644772061,0.7959553044143264,0.9997937487317021
+DomainLength,HostnameLength,HostnameLength,235370,0.9998470493265922,0.0014997663253600714,0.9998341907132031
+NoOfSubDomain,HostnameLabelCount,HostnameLabelCount,235370,2.1243149084420275e-05,1.9999447678123805,0.9998174893542041
+NoOfLettersInURL,NoOfLettersInURL_recomputed,Letters,235370,0.0,7.782168500658537,0.9982350262889489
+NoOfDegitsInURL,NoOfDigitsInURL_recomputed,Digits,235370,0.9948549092917535,0.005795131070229851,0.9997096091743404
+NoOfOtherSpecialCharsInURL,NoOfOtherSpecialCharsInURL_recomputed,Other characters,235370,0.0,3.936198326039852,0.9621330146402622

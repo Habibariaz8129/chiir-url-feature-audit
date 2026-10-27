@@ -1,0 +1,5 @@
+split,model,sigma,validation_AP
+random,Decision Tree,0.0,0.7994026469418296
+random,Decision Tree,0.1,0.757459942272627
+random,Decision Tree,0.3,0.6944239957588527
+random,Decision Tree,0.5,0.6460668344573904

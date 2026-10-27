@@ -1,0 +1,6 @@
+input,normalised_url,ascii_hostname,URLLength,HostnameLength,HostnameLabelCount,NoOfLettersInURL_recomputed,NoOfDigitsInURL_recomputed,NoOfOtherSpecialCharsInURL_recomputed,parse_error
+https://例え.テスト/パス?q=1,https://%E4%BE%8B%E3%81%88.%E3%83%86%E3%82%B9%E3%83%88/%E3%83%91%E3%82%B9?q=1,xn--r8jz45g.xn--zckzah,77,22,2,18,31,28,
+https://example.com/%E2%9C%93?q=%252F#frag,https://example.com/%E2%9C%93?q=%252F#frag,example.com,42,11,2,23,7,12,
+http://192.0.2.10:8080/login,http://192.0.2.10:8080/login,192.0.2.10,28,10,4,9,11,8,
+https://Example.COM.:443/a,https://Example.COM.:443/a,example.com,26,11,2,16,3,7,
+http://[::1,http://[::1,,11,0,0,4,1,6,ValueError: Invalid IPv6 URL

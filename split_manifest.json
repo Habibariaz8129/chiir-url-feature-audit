@@ -1,0 +1,228 @@
+{
+  "random": {
+    "algorithm": {
+      "method": "stratified train_test_split twice",
+      "test_fraction": 0.2,
+      "seed_test": 42,
+      "validation_fraction_of_trainval": 0.25,
+      "seed_validation": 43
+    },
+    "partitions": {
+      "core": {
+        "n": 141222,
+        "class_counts_csv_label": {
+          "0": 80910,
+          "1": 60312
+        }
+      },
+      "validation": {
+        "n": 47074,
+        "class_counts_csv_label": {
+          "0": 26970,
+          "1": 20104
+        }
+      },
+      "train_plus_validation": {
+        "n": 188296,
+        "class_counts_csv_label": {
+          "0": 107880,
+          "1": 80416
+        }
+      },
+      "test": {
+        "n": 47074,
+        "class_counts_csv_label": {
+          "0": 26970,
+          "1": 20104
+        }
+      }
+    },
+    "target": "Phishing-positive target: supplied label 1 = phishing; supplied label 0 = legitimate (label inversion verified against canonical UCI CSV).",
+    "models": {
+      "Logistic Regression": {
+        "configuration": "C=0.01; max_iter=1000; random_state=42",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      },
+      "Decision Tree": {
+        "configuration": "max_depth=3; random_state=42",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      },
+      "Random Forest": {
+        "configuration": "n_estimators=20; max_depth=5; random_state=42; n_jobs=1",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      },
+      "XGBoost": {
+        "configuration": "n_estimators=20; max_depth=2; learning_rate=0.03; subsample=0.6; colsample_bytree=0.6; reg_alpha=2; reg_lambda=2; random_state=42; n_jobs=1; eval_metric=logloss; tree_method=hist",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      }
+    }
+  },
+  "exact-hostname": {
+    "algorithm": {
+      "method": "GroupShuffleSplit by exact ASCII hostname",
+      "test_fraction_of_groups": 0.2,
+      "seed_test": 42,
+      "validation_fraction_of_remaining_groups": 0.25,
+      "seed_validation": 43,
+      "libpsl_version": "0.21.2 (+libidn2/2.3.7)",
+      "group_overlap_core_validation": 0,
+      "group_overlap_core_test": 0,
+      "group_overlap_validation_test": 0,
+      "unique_groups_by_partition": {
+        "core": 132045,
+        "validation": 44016,
+        "test": 44016
+      }
+    },
+    "partitions": {
+      "core": {
+        "n": 141001,
+        "class_counts_csv_label": {
+          "0": 80787,
+          "1": 60214
+        }
+      },
+      "validation": {
+        "n": 46855,
+        "class_counts_csv_label": {
+          "0": 27041,
+          "1": 19814
+        }
+      },
+      "train_plus_validation": {
+        "n": 187856,
+        "class_counts_csv_label": {
+          "0": 107828,
+          "1": 80028
+        }
+      },
+      "test": {
+        "n": 47514,
+        "class_counts_csv_label": {
+          "0": 27022,
+          "1": 20492
+        }
+      }
+    },
+    "target": "Phishing-positive target: supplied label 1 = phishing; supplied label 0 = legitimate (label inversion verified against canonical UCI CSV).",
+    "models": {
+      "Logistic Regression": {
+        "configuration": "C=0.01; max_iter=1000; random_state=42",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      },
+      "Decision Tree": {
+        "configuration": "max_depth=3; random_state=42",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      },
+      "Random Forest": {
+        "configuration": "n_estimators=20; max_depth=5; random_state=42; n_jobs=1",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      },
+      "XGBoost": {
+        "configuration": "n_estimators=20; max_depth=2; learning_rate=0.03; subsample=0.6; colsample_bytree=0.6; reg_alpha=2; reg_lambda=2; random_state=42; n_jobs=1; eval_metric=logloss; tree_method=hist",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      }
+    }
+  },
+  "registered-domain": {
+    "algorithm": {
+      "method": "GroupShuffleSplit by libpsl registrable domain",
+      "test_fraction_of_groups": 0.2,
+      "seed_test": 42,
+      "validation_fraction_of_remaining_groups": 0.25,
+      "seed_validation": 43,
+      "libpsl_version": "0.21.2 (+libidn2/2.3.7)",
+      "group_overlap_core_validation": 0,
+      "group_overlap_core_test": 0,
+      "group_overlap_validation_test": 0,
+      "unique_groups_by_partition": {
+        "core": 117627,
+        "validation": 39209,
+        "test": 39209
+      }
+    },
+    "partitions": {
+      "core": {
+        "n": 138606,
+        "class_counts_csv_label": {
+          "0": 80516,
+          "1": 58090
+        }
+      },
+      "validation": {
+        "n": 45991,
+        "class_counts_csv_label": {
+          "0": 27162,
+          "1": 18829
+        }
+      },
+      "train_plus_validation": {
+        "n": 184597,
+        "class_counts_csv_label": {
+          "0": 107678,
+          "1": 76919
+        }
+      },
+      "test": {
+        "n": 50773,
+        "class_counts_csv_label": {
+          "0": 27172,
+          "1": 23601
+        }
+      }
+    },
+    "target": "Phishing-positive target: supplied label 1 = phishing; supplied label 0 = legitimate (label inversion verified against canonical UCI CSV).",
+    "models": {
+      "Logistic Regression": {
+        "configuration": "C=0.01; max_iter=1000; random_state=42",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      },
+      "Decision Tree": {
+        "configuration": "max_depth=3; random_state=42",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      },
+      "Random Forest": {
+        "configuration": "n_estimators=20; max_depth=5; random_state=42; n_jobs=1",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      },
+      "XGBoost": {
+        "configuration": "n_estimators=20; max_depth=2; learning_rate=0.03; subsample=0.6; colsample_bytree=0.6; reg_alpha=2; reg_lambda=2; random_state=42; n_jobs=1; eval_metric=logloss; tree_method=hist",
+        "selected_sigma": 0.0,
+        "scaler": "StandardScaler fitted on core + validation",
+        "threshold": 0.5
+      }
+    }
+  },
+  "canonical_label_verification": {
+    "status": "verified",
+    "canonical_sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6",
+    "supplied_sha256": "78636bd2bf9166f45b6a31232ef461a2814ef38e53f287c56deaa994d2d43fa9",
+    "matched_rows": 235795,
+    "matched_distinct_URLs": 235370,
+    "unmatched_URLs": 0,
+    "rowwise_label_inversions": 235795,
+    "rowwise_label_conflicts": 0
+  }
+}
