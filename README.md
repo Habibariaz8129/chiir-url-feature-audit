@@ -23,11 +23,11 @@ The recorded run used Python 3.13.5, pandas 2.2.3, NumPy 2.3.5, scikit-learn 1.8
 python -m pip install -r requirements.txt
 ```
 
-The exact-hostname and registrable-domain group split code relies on the system `libpsl` library. The recorded experiment environment was Linux; ensure `libpsl` is installed and discoverable before running all three split protocols. Versions are recorded in `software_versions.json` among the published artefacts.
+The exact-hostname and registrable-domain group split code relies on the system `libpsl` library. The recorded experiment environment was Linux; ensure `libpsl` is installed and discoverable before running all three split protocols. Versions are recorded in `results/software_versions.json` among the published artefacts.
 
 ## Reproduction instructions
 
-The files in this anonymous mirror are currently listed at the repository root. The commands below therefore use root-level Python script names rather than `scripts/` paths. Run commands from the downloaded/cloned repository root.
+The Python scripts are stored in `scripts/`, and the published result files are stored in `results/`. Run commands from the downloaded/cloned repository root.
 
 ### 1. Create the data directory and download the canonical CSV
 
@@ -48,8 +48,8 @@ Download `PhiUSIIL_Phishing_URL_Dataset.csv` from the official UCI page and plac
 ### 2. Recreate the supplied label-inverted artefact and verify it
 
 ```bash
-python recreate_supplied_artifact.py --canonical data/official/PhiUSIIL_Phishing_URL_Dataset.csv --out data/phiusiil_phishing.csv
-python verify_canonical.py --supplied data/phiusiil_phishing.csv --canonical data/official/PhiUSIIL_Phishing_URL_Dataset.csv --out results/canonical_match
+python scripts/recreate_supplied_artifact.py --canonical data/official/PhiUSIIL_Phishing_URL_Dataset.csv --out data/phiusiil_phishing.csv
+python scripts/verify_canonical.py --supplied data/phiusiil_phishing.csv --canonical data/official/PhiUSIIL_Phishing_URL_Dataset.csv --out results/canonical_match
 ```
 
 The reconstruction performs two documented operations: drop `FILENAME` if present and replace `label` with `1 - label`, preserving row order and the remaining fields. The supplied-file SHA-256 recorded in the verification report is `78636bd2bf9166f45b6a31232ef461a2814ef38e53f287c56deaa994d2d43fa9`. CSV serialization can vary across environments; consult the row-level and shared-field comparison reports if a newly written file has a different byte hash.
@@ -57,7 +57,7 @@ The reconstruction performs two documented operations: drop `FILENAME` if presen
 ### 3. Recompute URL-only features and feature-audit outputs
 
 ```bash
-python extract_features.py --csv data/phiusiil_phishing.csv --out data/recomputed
+python scripts/extract_features.py --csv data/phiusiil_phishing.csv --out data/recomputed
 ```
 
 This step removes exact duplicate URLs, keeping the first occurrence, and writes `data/recomputed/deduplicated_features_for_audit.csv.gz` plus feature-agreement metrics, representative URL examples, normalization examples, and an environment/source-audit JSON file.
@@ -65,7 +65,7 @@ This step removes exact duplicate URLs, keeping the first occurrence, and writes
 ### 4. Re-run the experiments
 
 ```bash
-python run_experiments.py --features data/recomputed/deduplicated_features_for_audit.csv.gz --out results/reproduced --bootstrap-resamples 1000
+python scripts/run_experiments.py --features data/recomputed/deduplicated_features_for_audit.csv.gz --out results/reproduced --bootstrap-resamples 1000
 ```
 
 The experiment runner generates metrics for all four classifiers on the random-URL, exact-hostname and registrable-domain splits, saved test labels/predictions/probabilities, 1,000-resample confidence intervals, validation-only noise sweep outputs, split manifests, and SHAP values with additivity-reconstruction checks. The stored result files in this repository are the outputs associated with the recorded run; rerunning is a separate operation and may require a compatible Linux environment for `libpsl`.
